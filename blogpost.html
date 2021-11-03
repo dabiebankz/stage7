@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Blog API</title>
+</head>
+<body>
+    <header>
+        <div class=" ">
+          <nav class="navbar navbar-expand-lg navbar-light bg-success p-3 text-center">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <span class="text-white">BLOG POSTS</span>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 header-nav">
+                  <li class="nav-item">
+                    <a class="nav-link text-body" aria-current="page" href="#">Home</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          
+        </div>
+      </header>
+    <div class="container">
+        <div class="mt-5">
+            <div class="post-display-section">
+                <h3 class="my-3">Post</h3>
+                <div class="posts-box">
+                  <div class="row" id="post-layout">
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script/bootstrap.min.js"></script>
+    <script src="script/post.js"></script>
+</body>
+</html>
