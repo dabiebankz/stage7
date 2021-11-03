@@ -1,6 +1,3 @@
-function myfunction(num) {
-    localStorage.setItem("createid", num);
-}
 
 
 function getPosts() {
@@ -13,9 +10,8 @@ function getPosts() {
         data.forEach(e => {
             // console.log(element)
             html += `
-            <div class="col-md-4 mb-3">
-                  <a class="text-decoration-none" href="blogpost.html"
-                   onClick="myfuction(${e.id}")>
+            <div class="col-md-4 mb-3 posts">
+                  <div class="text-decoration-none">
                      <div class="card h-100">
                             <div class="card-body text-dark">
                                 <div class="d-flex justify-content-end">
@@ -25,12 +21,24 @@ function getPosts() {
                                     <p class="post-body">${e.body}</p>
                             </div>
                         </div>
-                    </a>
+                    </div>
             </div>
             `
             postLayout.innerHTML = html
         });
+        getPost();
     }) 
 }
 
 getPosts();
+
+
+function getPost() {
+    let posts = document.querySelectorAll('.posts')
+    posts.forEach((e,index) => {
+        e.addEventListener('click', () => {
+            localStorage.setItem('postId', index + 1)
+            window.location.href = 'blogpost.html';
+        })
+    }) 
+}
